@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Gabrielei 💌</title>
+  <meta name="description" content="Turiu tau vieną mažą klausimą…">
+  <meta name="theme-color" content="#ffd2e3">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Gabrielei 💌">
+  <meta property="og:description" content="Turiu tau vieną mažą klausimą…">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kajusgecevicius-web.github.io/kvietimas/">
+  <meta property="og:image" content="https://kajusgecevicius-web.github.io/kvietimas/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%92%8C%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hearts" id="hearts" aria-hidden="true"></div>
+
+  <main class="stage">
+    <!-- 1. Vokas -->
+    <section class="screen active" id="screen-envelope">
+      <div class="envelope-wrap">
+        <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Atidaryti laišką Gabrielai">
+          <div class="env-back"></div>
+          <div class="env-letter">
+            <span class="letter-heart" aria-hidden="true">♥</span>
+            <span class="letter-name">Gabrielei</span>
+            <span class="letter-sub">laiškas nuo Kajaus</span>
+          </div>
+          <div class="env-front"></div>
+          <div class="env-flap"></div>
+          <div class="env-seal" aria-hidden="true"><span>G</span></div>
+        </div>
+        <p class="hint">Spustelėk, kad atidarytum 💌</p>
+      </div>
+    </section>
+
+    <!-- 2. Klausimas -->
+    <section class="screen" id="screen-question">
+      <div class="card">
+        <p class="eyebrow">Gabrielei</p>
+        <h1>Ar eisi su manimi<br><em>į pasimatymą?</em></h1>
+        <p class="sub">Nuo Kajaus 💌</p>
+        <div class="btn-row">
+          <button class="btn btn-yes" id="btnYes" type="button">Taip 💖</button>
+          <button class="btn btn-no" id="btnNo" type="button">Ne</button>
+        </div>
+        <p class="no-note" id="noNote" aria-live="polite" hidden>Atrodo, „Ne“ neveikia 😌</p>
+      </div>
+    </section>
+
+    <!-- 3. Datos pasirinkimas -->
+    <section class="screen" id="screen-dates">
+      <div class="card dates-card">
+        <p class="eyebrow">Ačiū, Gabriele 💗</p>
+        <h2>Kada tau patogiau?</h2>
+        <p class="sub">Pasirink vieną iš dviejų dienų.<br>Laiką suderinsim vėliau 😉</p>
+
+        <div class="date-options" role="radiogroup" aria-label="Pasimatymo datos">
+          <label class="date-card">
+            <input type="radio" name="date" value="2026-11-28">
+            <span class="date-num">28</span>
+            <span class="date-text">
+              <span class="date-month">2026 m. lapkričio</span>
+              <span class="date-weekday">šeštadienis</span>
+            </span>
+            <span class="date-heart" aria-hidden="true">♥</span>
+          </label>
+
+          <label class="date-card">
+            <input type="radio" name="date" value="2026-11-29">
+            <span class="date-num">29</span>
+            <span class="date-text">
+              <span class="date-month">2026 m. lapkričio</span>
+              <span class="date-weekday">sekmadienis</span>
+            </span>
+            <span class="date-heart" aria-hidden="true">♥</span>
+          </label>
+        </div>
+
+        <button class="btn btn-confirm" id="btnConfirm" type="button" disabled>Tvirtinu pasirinkimą 💗</button>
+        <p class="tiny">Tavo pasirinkimas keliaus tiesiai Kajui 💗</p>
+      </div>
+    </section>
+
+    <!-- 4. Padėka -->
+    <section class="screen" id="screen-done">
+      <div class="card done-card">
+        <div class="done-heart" aria-hidden="true">💗</div>
+        <p class="eyebrow">Pasimatymas suderintas</p>
+        <h2>Ačiū, Gabriele!</h2>
+        <p class="done-text" id="doneText">Lapkričio 28 d. jau pažymėta mano kalendoriuje.</p>
+        <p class="sub">Kur ir ką veiksim – tegul tai bus mažas netikėtumas 😉</p>
+        <p class="signature">– Kajus</p>
+        <p class="send-error" id="sendError" hidden></p>
+      </div>
+    </section>
+  </main>
+
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
