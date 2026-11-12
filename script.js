@@ -2,8 +2,7 @@
    Gabrielės kvietimas 💌
    Formspree endpointą įklijuok žemiau esančioje eilutėje.
    ========================================================= */
-const FORMSPREE_ENDPOINT = ""; // pvz. "https://formspree.io/f/abcdwxyz"
-
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mdegkeal";
 const DATES = {
   "2026-11-28": {
     long: "2026 m. lapkričio 28 d., šeštadienis",
